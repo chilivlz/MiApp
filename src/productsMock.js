@@ -3,7 +3,7 @@ export const products = [
     {
         id: 1,
         title: "Mariposa",
-        price: 15000,
+        price: 15000 ,
         stock: 2,
         description: "Ilustracion inspirada en renacer",
         category: "animales",
@@ -32,7 +32,7 @@ export const products = [
         title: "Had",
         price: 40000,
         stock: 5,
-        description: "Ilustracionn de mano  ",
+        description: "Ilustracionn de mano",
         category: "ilustraciones",
         img: "https://res.cloudinary.com/dz0uwxeqq/image/upload/v1678567544/6fa9357605a01352c32c67a34cd777d6_le4nfl.jpg"
     }, 

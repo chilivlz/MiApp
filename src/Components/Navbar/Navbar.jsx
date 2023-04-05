@@ -11,7 +11,7 @@ const Navbar = ({ children }) => {
   return (
     <div>
     <div className={styles.containerNavbar}>
-      <Link to="/" style={{ color: "black", textDecoration: "none", textAlign:"center" }}>
+      <Link to="/" style={{ color: "black", textDecoration: "none", textAlign:"center",marginLeft:"40px", fontFamily: "Trebuchet MS"}}>
        ChiliArt
       </Link>
 

@@ -1,13 +1,16 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Cart from "./Components/Cart/Cart";
+import Form from "./Components/Form/Form";
 import ItemDetailContainer from "./Components/ItemDetailContainer/ItemDetailContainer";
 import ItemListContainer from "./Components/ItemListContainer/ItemListContainer";
-import Login from "./Components/Login/Login";
+
 import Navbar from "./Components/Navbar/Navbar";
+import CartContextProvider from "./context/CartContext";
 
 function App() {
   return (
     <BrowserRouter>
+    <CartContextProvider>
       <Navbar />
 
       <Routes>
@@ -18,11 +21,14 @@ function App() {
         <Route path="/cart" element={<Cart />} />
 
         <Route path="/itemDetail/:id" element={<ItemDetailContainer />} />
+        <Route path="/formulario" element={<Form/>}/>
 
-        <Route path="/login" element={<Login />} />
+      
 
         <Route path="*" element={<h1> error 404: Not found </h1>} />
+
       </Routes>
+      </CartContextProvider>
     </BrowserRouter>
   );
 }

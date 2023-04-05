@@ -1,20 +1,31 @@
-import { BsFillCartCheckFill } from "react-icons/bs";
+import { GiShoppingCart} from "react-icons/gi";
 import "./CartWidget.css";
+import{useContext} from "react"
 
 import { Link } from "react-router-dom";
+import { CartContext } from "../../context/CartContext";
 
-const CartWidget = ({ numero }) => {
+
+
+
+const CartWidget = () => {
+
+
+
+  const { getTotalQuantity} = useContext ( CartContext )
+
+  const total = getTotalQuantity()
   return (
     <Link to="/cart">
       <div className="container-cart">
-        <BsFillCartCheckFill
+        <GiShoppingCart
           style={{
             fontSize: "2rem",
             color: "black",
           }}
         />
         <div style={{ color: "black"}}>
-          <span>0</span>
+          <span>{total}</span> 
         </div>
       </div>
     </Link>

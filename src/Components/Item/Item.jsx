@@ -1,5 +1,4 @@
 import React from "react";
-import styles from "./Item.module.css";
 import Card from "@mui/material/Card";
 import CardActions from "@mui/material/CardActions";
 import CardContent from "@mui/material/CardContent";
@@ -7,13 +6,15 @@ import CardMedia from "@mui/material/CardMedia";
 import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
 import { Link } from "react-router-dom";
+
+
 const Item = ({ element }) => {
   return (
     <Card
       sx={{
         width: 345,
         height: 500,
-        backgroundColor: "#fbd6b0",
+        backgroundColor: "#F5F2C6",
         color: "black",
         borderRadius: "10px",
        
@@ -32,14 +33,24 @@ const Item = ({ element }) => {
         <Typography variant="body">${element.price}.-</Typography>
       </CardContent>
       <CardActions>
-        <Link to={`/itemDetail/${element.id}`} >
-          <Button size="small" variant="contained" color= "secondary" textDecoraction="none">
+      <Link to={`/itemDetail/${element.id}`}>
+      <Button sx={{ 
+            backgroundColor: "#B8B591", 
+            color: "black", 
+            fontWeight: "bold", 
+            textTransform: "none", 
+            textDecoration: "none !important",
+      
+    }}>
             Ver detalle
-          </Button>
+        </Button>
+     
         </Link>
       </CardActions>
     </Card>
   );
 };
+
+
 
 export default Item;
